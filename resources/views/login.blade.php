@@ -5,7 +5,7 @@ LOGIN PAGE
 
 @section("content")
 <h1>LOG IN</h1>
-<form action="" method="post">
+<form action="{{route('login.submit')}}" method="post">
     @csrf
     <div>
         <label for="username">USERNAME</label>

@@ -12,8 +12,13 @@
             <a href="{{route('about')}}">ABOUT</a>
             <a href="{{route('profile')}}">PROFILE</a>
             <a href="{{route('contact')}}">CONTACT</a>
-            <a href="{{route('login')}}">LOGIN</a>
-            <a href="{{route('register')}}">REGISTER</a>
+            @if(auth()->check())
+                <a href="{{route('logout')}}">LOGOUT</a>
+            @else
+                <a href="{{route('login')}}">LOGIN</a>
+                <a href="{{route('register')}}">REGISTER</a>
+            @endif
+            
         </nav>
     </header>
     @yield("content")

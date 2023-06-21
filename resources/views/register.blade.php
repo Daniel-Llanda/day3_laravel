@@ -5,7 +5,7 @@ HOME PAGE
 
 @section("content")
 <h1>REGISTRATION</h1>
-<form action="" method="post">
+<form action="{{route('register.submit')}}" method="post">
     @csrf
     <div>
         <label for="name">NAME</label>
